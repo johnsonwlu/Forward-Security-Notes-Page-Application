@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import NoteForm from "./components/NoteForm";
 import NotesList from "./components/NotesList";
-
+import {useSelector, useDispatch} from 'react-redux';
 import './App.css';
+import { addNoteAsync, getNotesAsync, removeNoteAsync } from "./reducers/users/thunks";
 
 function App() {
   const [newNote, setNewNote] = useState({});
@@ -12,19 +13,22 @@ function App() {
   };
 
   const [content, setContent] = useState("");
-  const [allNotes, setAllNotes] = useState([]);
-  
+  // const [allNotes, setAllNotes] = useState([]);
+  const allNotes = useSelector(state => state.users.list);
+  const dispatch = useDispatch();
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!newNote.title) return;
-    setAllNotes((prev) => [newNote, ...prev]);
+    // setAllNotes((prev) => [newNote, ...prev]);
+    dispatch(addNoteAsync(newNote));
     setNewNote({});
   };
 
   const handleDelete = (noteIdToRemove) => {
-    setAllNotes((prev) => prev.filter(
-      (note) => note.id !== noteIdToRemove
-    ));
+    // setAllNotes((prev) => prev.filter(
+    //   (note) => note.id !== noteIdToRemove
+    // ));
+    dispatch(removeNoteAsync(noteIdToRemove));
   };
   
   const handleClick = (noteIdToClick) => {
@@ -34,6 +38,9 @@ function App() {
     }
   };
 
+  useEffect (() => {
+    dispatch(getNotesAsync());
+  }, [dispatch]);
   return (
     <main>
       <div className="sidebar">
