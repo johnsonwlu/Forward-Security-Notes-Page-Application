@@ -13,21 +13,17 @@ function App() {
   };
 
   const [content, setContent] = useState("");
-  // const [allNotes, setAllNotes] = useState([]);
   const allNotes = useSelector(state => state.users.list);
   const dispatch = useDispatch();
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!newNote.title) return;
-    // setAllNotes((prev) => [newNote, ...prev]);
+  
     dispatch(addNoteAsync(newNote));
     setNewNote({});
   };
 
   const handleDelete = (noteIdToRemove) => {
-    // setAllNotes((prev) => prev.filter(
-    //   (note) => note.id !== noteIdToRemove
-    // ));
+  
     dispatch(removeNoteAsync(noteIdToRemove));
   };
   
