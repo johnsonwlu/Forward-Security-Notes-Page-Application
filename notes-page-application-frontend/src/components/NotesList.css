@@ -1,0 +1,30 @@
+  .note-item:hover {
+    background-color: #f5f5f5; /* Change background color on hover */
+  }
+
+  /* NotesList.css */
+.notes-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .note-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .note-title {
+    flex-grow: 1;
+    font-size: 16px;
+  }
+  
+  .delete-button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+  }
+  
