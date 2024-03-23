@@ -22,4 +22,11 @@ export const removeNoteAsync = createAsyncThunk(
     async (id, {fulfillWithValue}) => {
         return fulfillWithValue(await UserService.removeNote(id));
     }
-)
+);
+
+export const editNoteAsync = createAsyncThunk(
+    actionTypes.EDIT_NOTE,
+    async (note) => {
+        return await UserService.editNote(note);
+    }
+);

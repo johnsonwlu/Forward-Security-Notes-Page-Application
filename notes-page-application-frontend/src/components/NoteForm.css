@@ -1,0 +1,45 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner {
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    color: black;
+    border-radius: 10px;
+}
+
+.popup-inner .close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.title {
+    width: 1000px;
+    height: 40px;
+    margin-bottom: 10px;
+    resize: none; 
+}
+
+.content {
+    width: 1000px;
+    height: 200px;
+    resize: none; 
+}
+
+.popup-inner .content,
+.popup-inner .title {
+    margin-left: auto;
+    margin-right: auto;
+}

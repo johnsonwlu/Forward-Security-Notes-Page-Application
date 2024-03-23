@@ -31,10 +31,22 @@ const removeNote = async (id) => {
     return id;
 };
 
+const editNote = async (note) => {
+    const response = await fetch('http://localhost:3001/users/' + note.id, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(note)
+    });
+    const data = await response.json();
+    return data;
+}
 const notesCommandsToExport = {
     getNotes,
     addNote,
-    removeNote
+    removeNote,
+    editNote
 };
 
 export default notesCommandsToExport;

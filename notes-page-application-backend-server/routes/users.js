@@ -52,4 +52,28 @@ router.delete('/:id', function(req, res, next) {
   res.status(204).send();
 });
 
+router.put('/:id', function(req, res, next) {
+  const noteId = Number(req.params.id);
+  const { title, content } = req.body;
+
+  const updatedNoteIndex = users.findIndex(note => note.id === noteId);
+
+  if (updatedNoteIndex !== -1) {
+    users[updatedNoteIndex].title = title;
+    users[updatedNoteIndex].content = content;
+
+    fs.writeFile('data.txt', JSON.stringify(users, null, 2), 'utf8', (err) => {
+      if (err) {
+        console.error('Error writing to file:', err);
+        res.status(500).send('Error updating note in file');
+      } else {
+        console.log('Data written to file with updated note:', users[updatedNoteIndex]);
+        res.status(200).send(users[updatedNoteIndex]);
+      }
+    });
+  } else {
+    res.status(404).send('Note not found');
+  }
+});
+
 module.exports = router;

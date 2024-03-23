@@ -9,10 +9,6 @@ export default function NotesList({ allNotes, handleDelete, handleClick }) {
           <div className="note-title" onClick={() => handleClick(id)}>
             {title}
           </div>
-          <button className="delete-button" onClick={(e) => {
-            e.stopPropagation();
-            handleDelete(id);
-          }}>delete</button>
         </li>
       ))}
     </ul>

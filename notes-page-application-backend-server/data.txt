@@ -1,1 +1,21 @@
-[]
+[
+  {},
+  {
+    "id": 1711189768700,
+    "title": "25"
+  },
+  {
+    "id": 1711190201567,
+    "title": "2"
+  },
+  {
+    "id": 1711190269007,
+    "title": "New Note number two",
+    "content": "This is the stuff I wanted to keep track of "
+  },
+  {
+    "id": 1711192022593,
+    "content": "23234",
+    "title": "234123"
+  }
+]
