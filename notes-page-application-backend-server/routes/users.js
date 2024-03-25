@@ -4,14 +4,30 @@ var fs = require('fs');
 
 var users = [];
 
-var fileDirectory = 'data.txt';
+var fileDirectory = '/app/data/data.txt';
+
+function isRunningInDocker() {
+  try {
+    fs.accessSync('/proc/1/cgroup', fs.constants.F_OK);
+    return true;
+  } catch (err) {
+    return false;
+  }
+}
+
+
+if (isRunningInDocker()) {
+  fileDirectory = '/app/data/data.txt'; 
+} else {
+  fileDirectory = 'data.txt'; 
+}
 
 function loadDataFromFile() {
   fs.readFile(fileDirectory, 'utf8', (err, fileData) => {
     if (err) {
       if (err.code === 'ENOENT') {
         console.log('Data file not found, creating new file...');
-        saveDataToFile(); 
+        saveDataToFile();
         return;
       }
       console.error('Error reading file:', err);
@@ -25,7 +41,6 @@ function loadDataFromFile() {
     }
   });
 }
-
 
 function saveDataToFile() {
   fs.writeFile(fileDirectory, JSON.stringify(users, null, 2), 'utf8', (err) => {
@@ -45,14 +60,14 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
   users.push(req.body);
-  saveDataToFile(); 
+  saveDataToFile();
   const item = users.filter((note) => note.id === req.body.id);
   res.status(201).send(item);
 });
 
 router.delete('/:id', function(req, res, next) {
   users = users.filter((note) => note.id !== Number(req.params.id));
-  saveDataToFile(); 
+  saveDataToFile();
   res.status(204).send();
 });
 
@@ -64,7 +79,7 @@ router.put('/:id', function(req, res, next) {
   if (updatedNoteIndex !== -1) {
     users[updatedNoteIndex].title = title;
     users[updatedNoteIndex].content = content;
-    saveDataToFile(); 
+    saveDataToFile();
     res.status(200).send(users[updatedNoteIndex]);
   } else {
     res.status(404).send('Note not found');

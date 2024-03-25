@@ -47,6 +47,19 @@ Go to your local browser and enter the following to access the notes page: http:
 
 ### Docker Setup Instructions
 
+With .tar files
+
+Please use the following commands within this folder to run the application through docker:
+
+Download the Dockers Containers folders and then open up a terminal
+
+in the terminal please cd into the Docker Containers folder and use the following commands:
+
+`docker load -i frontend.tar`
+`docker load -i backend.tar`
+`docker-compose up`
+
+
 # Design Choice and Technology Usage
 I made use of HTML, CSS and JavaScript to handle the frontend functionality as well as styling the frontend.
 
