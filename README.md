@@ -1,6 +1,6 @@
 # Forward-Security-Notes-Page-Application
 
-Notes webpage created for assessment purposes. For submission purposes, I have made it possible for the user to access this application either locally or through docker. If the user wishes to run this application through a local file, please access the `Note Page Application Local Version` folder if the user wishes to run this application through a docker container please access the `Note Page Application Docker Version` folder. There are instructions within each of these folders to help the user run this application on their setup.
+Notes webpage created for assessment purposes. For submission purposes, I have made it possible for the user to access this application either locally or through Docker. If the user wishes to run this application through a local file, please access the `Note Page Application Local Version` folder if the user wishes to run this application through a Docker container please access the `Note Page Application Docker Version` folder. There are instructions within each of these folders to help the user run this application on their setup.
 
 # Usage
 
@@ -47,7 +47,7 @@ To delete a note, the user must first click to view the note which they wish to 
 
 ### Docker Setup Instructions
 
-For this assessment, I have submitted the docker containers as .tar files. Please do the following within this folder to run the application through docker:
+For this assessment, I have submitted the Docker containers as .tar files. Please do the following within this folder to run the application through Docker:
 
 1. Download the `Dockers Containers` zip file
 
@@ -59,7 +59,7 @@ For this assessment, I have submitted the docker containers as .tar files. Pleas
 
     `docker load -i backend.tar`
 
-    These two commands above serve to load the docker containers for both the frontend and the backend
+    These two commands above serve to load the Docker containers for both the frontend and the backend
 
     if the user is facing permission issues, please type in the following two commands instead (the user will also be prompted for their admin password in this scenario):
 
@@ -75,7 +75,7 @@ For this assessment, I have submitted the docker containers as .tar files. Pleas
 
     `sudo docker-compose up`
 
-    Due to the fact that this application has a need for a local storage, I create a docker-compose file which serves to run the two docker containers while also creating a local storage for the backend docker container to both create and manipulate data.
+    Due to the fact that this application has a need for a local storage, I create a docker-compose file which serves to run the two Docker containers while also creating a local storage for the backend Docker container to both create and manipulate data.
 
 4.  The user can now go to their local browser and enter the following to access the notes page: http://localhost:3000/
 
@@ -92,13 +92,13 @@ I made use of Node.js as the backend and Express.js as the server. With Express.
 
 # Challenges
 
-There was some challenges with the creation of the docker container due to the fact that I am using a local file as a storage means rather than a database such as MongoDB. Docker containers do not have permission to access local text files which made it impossible for me to use a local file to store my data. To overcome this, I made use of docker volumes which is a feature for docker containers to access and modify data files outside of the containers that are currently running. There are two versions of this application code. The docker version utilizes docker volume to store data whereas the non-docker version utilizes a local txt file to store data.
+There was some challenges with the creation of the Docker container due to the fact that I am using a local file as a storage means rather than a database such as MongoDB. Docker containers do not have permission to access local text files which made it impossible for me to use a local file to store my data. To overcome this, I made use of Docker volumes which is a feature for Docker containers to access and modify data files outside of the containers that are currently running. There are two versions of this application code. The Docker version utilizes Docker volume to store data whereas the non-Docker version utilizes a local txt file to store data.
 
 # Future Plans
 
 Given the opportunity to improve upon this project, I would improve on the following:
 
-- My application is currently dependent on either a local txt for or docker volumes as a means to store my data. I would change the backend component such that it uses a backend server such as MongoDB which would help the scalability, fault tolerance and the overall application performance.
+- My application is currently dependent on either a local txt for or Docker volumes as a means to store my data. I would change the backend component such that it uses a backend server such as MongoDB which would help the scalability, fault tolerance and the overall application performance.
 
 - I also plan on changing the CSS layout such that the webpage is more easily accessible on various other platforms such as mobile phones and tablets.
 
