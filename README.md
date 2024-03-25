@@ -23,7 +23,7 @@ To delete a note, the user must first click to view the note which they wish to 
 
 1. Get the repository through this command:
 
-    `https://github.com/johnsonwlu/Forward-Security-Notes-Page-Application.git`
+    `git clone https://github.com/johnsonwlu/Forward-Security-Notes-Page-Application.git`
 
 2. Open Two Terminals
 
