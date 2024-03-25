@@ -1,6 +1,6 @@
 # Forward-Security-Notes-Page-Application
 
-Notes webpage created for application purposes. 
+Notes webpage created for assessment purposes. 
 
 # Usage
 
@@ -17,70 +17,70 @@ To delete a note, the user can click on the delete button on the top right of th
 
 ### Local Setup Instructions
 
-Step 1:
+1. Open Two Terminals
 
-Open Two Terminals
+2.  Start up the frontend in the first terminal by writing down the following commands:
 
-Step 2: 
+    `cd notes-page-application-frontend`
 
-Start up the frontend in the first terminal by writing down the following commands:
+    `npm install`
 
-`cd notes-page-application-frontend`
+    `npm start`
 
-`npm install`
+3.  Start up the backend in the second terminal by writing down the following commands:
 
-`npm start`
+    `cd notes-page-application-backend-server`
 
-Step 3:
+    `npm install`
 
-Start up the backend in the second terminal by writing down the following commands:
+    `npm start`
 
-`cd notes-page-application-backend-server`
-
-`npm install`
-
-`npm start`
-
-Step 4: 
-
-Go to your local browser and enter the following to access the notes page: http://localhost:3000/
+4.  Go to your local browser and enter the following to access the notes page: http://localhost:3000/
 
 ### Docker Setup Instructions
 
-With .tar files
+For this assessment, I have submitted the docker containers as .tar files. Please use the do the following within this folder to run the application through docker:
 
-Please use the following commands within this folder to run the application through docker:
+1. Download the `Dockers Containers` folder above the instructions file and then open up a terminal
 
-Download the Dockers Containers folder and then open up a terminal
+2. in the terminal please cd into the `Docker Containers` folder and use the following commands:
 
-in the terminal please cd into the Docker Containers folder and use the following commands:
+    `docker load -i frontend.tar`
 
-`docker load -i frontend.tar`
+    `docker load -i backend.tar`
 
-`docker load -i backend.tar`
+    These two commands above serve to load the docker containers for both the frontend and the backend
 
-`docker-compose up`
+3. Finally in the terminal, please use the following command:
 
+    `docker-compose up`
+
+    Due to the fact that this application has a need for a local storage, I create a docker-compose file which serves to run the two docker containers while also creating a local storage for the backend docker container to both create and manipulate data.
 
 # Design Choice and Technology Usage
 
-I made use of HTML, CSS and JavaScript to handle the frontend functionality as well as styling the frontend.
+### Frontend Technology
+I made use of HTML, CSS and JavaScript to handle both frontend functionality and styling. I used React to help me create individual components that could be used within the frontend.
 
-I used React to create the frontend which helped me isolate individual components that could be added to App.js. 
+### State Management with Redux
+I made use of Redux and Redux store to maintain the state of the notes within the application. With the use of Redux I was able to manage the application state of inidividual notes across different components
 
-I also made use of redux and store to maintain the state of the notes within the application and to enable access to the note state through different components
+### Backend Technology and RESTful API
+I made use of Node.js as the backend and Express.js as the server. With Express.js, I was able to create a RESTful API to communicate between the frontend and backend to create, read, update and delete notes. 
 
-I made use of Node.js as the backend and Express.js as the server. With these, I was able to create a RESTful API to communicate between the frontend and backend to create, read, update and delete notes. 
+# Challenges
 
-
+There was some challenges with the creation of the docker container due to the fact that I am using a local file as a storage means rather than a database such as MongoDB. Docker containers do not have permission to access local text files which made it impossible for me to use a local file to store my data. To overcome this, I made use of docker volumes which is a feature for docker containers to access and modify data files outside of the containers that are currently running. There are two versions of this application code. The docker version utilizes docker volume to store data whereas the non-docker version utilizes a local txt file to store data.
 
 # Future Plans
 
-Given the opportunity to improve upon this project, I would change the backend component such that it uses a backend server such as MongoDB to improve the scalability of the application for larger amounts of data handling. 
+Given the opportunity to improve upon this project, I would improve on the following:
 
-I also plan on changing the CSS layout such that the webpage is more easily accessible on various other platforms such as mobile phones and tablets.
+- My application is currently dependent on either a local txt for or docker volumes as a means to store my data. I would change the backend component such that it uses a backend server such as MongoDB which would help the scalability, fault tolerance and the overall application performance.
 
-As of the creation of this application, I have mainly relied on manual testing, however, it might be wise to create more automated tests if I plan to make the project larger in order to simplify the process. 
+- I also plan on changing the CSS layout such that the webpage is more easily accessible on various other platforms such as mobile phones and tablets.
 
-# Challenges
-There was some challenges with the creation of the docker container due to the fact that I am using a local storage over non-local due to the fact that docker containers do not have permission to access local text files. As such, there are two versions of this application code. The docker version utilizes docker volume as a means to store data whereas the non-docker version utilizes a local txt file to store data.
+- As of the creation of this application, I have mainly relied on manual testing, however, for the future I would create more automated tests if I plan to make the project larger in order to simplify the testing process.
+
+
+
