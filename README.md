@@ -17,9 +17,13 @@ To delete a note, the user can click on the delete button on the top right of th
 
 ### Local Setup Instructions
 
-1. Open Two Terminals
+1. Get the repository through this command:
 
-2.  Start up the frontend in the first terminal by writing down the following commands:
+    `https://github.com/johnsonwlu/Forward-Security-Notes-Page-Application.git`
+
+2. Open Two Terminals
+
+3.  Navigate to the `Forward-Security-Notes-Page-Application` folder through the terminal and then start up the frontend in the first terminal by writing down the following commands:
 
     `cd notes-page-application-frontend`
 
@@ -27,7 +31,7 @@ To delete a note, the user can click on the delete button on the top right of th
 
     `npm start`
 
-3.  Start up the backend in the second terminal by writing down the following commands:
+4.  Navigate to the `Forward-Security-Notes-Page-Application` folder through the terminal and then start up the backend in the second terminal by writing down the following commands:
 
     `cd notes-page-application-backend-server`
 
@@ -35,15 +39,17 @@ To delete a note, the user can click on the delete button on the top right of th
 
     `npm start`
 
-4.  Go to your local browser and enter the following to access the notes page: http://localhost:3000/
+5.  Go to your local browser and enter the following to access the notes page: http://localhost:3000/
 
 ### Docker Setup Instructions
 
 For this assessment, I have submitted the docker containers as .tar files. Please do the following within this folder to run the application through docker:
 
-1. Download the `Dockers Containers` folder above the instructions file and then open up a terminal
+1. Download the `Dockers Containers` zip file
 
-2. in the terminal please cd into the `Docker Containers` folder and use the following commands:
+2. Unzip the downloaded file and then open up a terminal
+
+2. In the terminal please navigate to the `Docker Containers` folder within the unzipped file (it is possible that the unzipped file will also be named `Docker Containers` so please navigate to the `Docker Containers` folder within the folder named `Docker Containers` if there is one) and use the following commands:
 
     `docker load -i frontend.tar`
 
