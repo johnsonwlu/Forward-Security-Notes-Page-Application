@@ -1,3 +1,5 @@
+/* App.css */
+
 .main-container {
   display: flex;
   height: 100%;
@@ -17,6 +19,14 @@
 .add-note-button {
   background-color: transparent;
   color: blue;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px; 
+}
+
+.add-note-button:hover {
+  background-color: transparent;
+  color: gray;
   border: none;
   cursor: pointer;
 }
@@ -61,6 +71,16 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  color: red;
+}
+
+.close-button:hover {
+  position: relative;
+  left: 95%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: gray;
 }
 
 .notes-heading-container {
@@ -72,10 +92,48 @@
   margin-right: 10px;
 }
 
-.add-note-button {
+
+
+
+.content-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center; 
+}
+
+
+.edit-button {
+  margin-right: 10px; 
   background-color: transparent;
-  color: blue;
   border: none;
   cursor: pointer;
-  margin-top: 20px; 
+  color: blue;
+}
+
+.edit-button:hover {
+  margin-right: 10px; 
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: gray;
+}
+.delete-button {
+  margin-right: 400px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: red;
+}
+
+.delete-button:hover {
+  margin-right: 400px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: gray;
 }

@@ -21,7 +21,7 @@ export default function EditForm({ currentNote, editNote, handleEditChange, hand
             onChange={(e) => handleEditChange(e)} 
           />
           <br/>
-          <button type="submit">Edit Note</button>
+          <button className = "submitButton" type="submit">Edit Note</button>
         </form>
       </div>
     </div>

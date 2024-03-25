@@ -43,3 +43,25 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.submitButton {
+    background-color: #555555;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.submitButton:hover {
+  background-color: white;
+  border-color: #555555;
+  color: #555555;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}

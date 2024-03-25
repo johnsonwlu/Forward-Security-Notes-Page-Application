@@ -22,7 +22,7 @@ export default function NoteForm({ newNote, handleChange, handleSubmit }) {
             onChange={handleChange}
           />
           <br/>
-          <button type="submit">Add Note</button>
+          <button className = "submitButton" type="submit">Add Note</button>
         </form>
       </div>
     </div>

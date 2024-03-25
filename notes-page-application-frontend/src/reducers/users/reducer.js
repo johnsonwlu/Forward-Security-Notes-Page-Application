@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getNotesAsync, addNoteAsync, removeNoteAsync, getSpecificNoteAsync, editNoteAsync} from './thunks';
+import { getNotesAsync, addNoteAsync, removeNoteAsync, editNoteAsync} from './thunks';
 import { REQUEST_STATE } from '../utils';
 
 const INITIAL_STATE = {
@@ -8,7 +8,6 @@ const INITIAL_STATE = {
     addNote: REQUEST_STATE.IDLE,
     removeNote: REQUEST_STATE.IDLE,
     editNoteAsync: REQUEST_STATE.IDLE,
-    getSpecificNote: REQUEST_STATE.IDLE
 };
 
 const notesTracker = createSlice({
