@@ -63,6 +63,7 @@ in the terminal please cd into the Docker Containers folder and use the followin
 
 
 # Design Choice and Technology Usage
+
 I made use of HTML, CSS and JavaScript to handle the frontend functionality as well as styling the frontend.
 
 I used React to create the frontend which helped me isolate individual components that could be added to App.js. 
@@ -71,11 +72,15 @@ I also made use of redux and store to maintain the state of the notes within the
 
 I made use of Node.js as the backend and Express.js as the server. With these, I was able to create a RESTful API to communicate between the frontend and backend to create, read, update and delete notes. 
 
+
+
 # Future Plans
 
 Given the opportunity to improve upon this project, I would change the backend component such that it uses a backend server such as MongoDB to improve the scalability of the application for larger amounts of data handling. 
 
 I also plan on changing the CSS layout such that the webpage is more easily accessible on various other platforms such as mobile phones and tablets.
+
+As of the creation of this application, I have mainly relied on manual testing, however, it might be wise to create more automated tests if I plan to make the project larger in order to simplify the process. 
 
 # Challenges
 There was some challenges with the creation of the docker container due to the fact that I am using a local storage over non-local due to the fact that docker containers do not have permission to access local text files. As such, there are two versions of this application code. The docker version utilizes docker volume as a means to store data whereas the non-docker version utilizes a local txt file to store data.
