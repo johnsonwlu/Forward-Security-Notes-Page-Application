@@ -7,11 +7,15 @@ Notes webpage created for assessment purposes. For submission purposes, I have m
 ### Creating a Note
 To add a note, the user can click on the add note button on the top left of the webpage. A pop-up form will appear for the user to fill out. To create a note, the user can click on the Add Note button within the form.
 
+### Viewing a Note
+
+To view a note, a user can click on the note's preview on the left hand sidebar which has a list of all the user created notes. Then the note will appear on the right side after the user clicks on the note preview.
+
 ### Editing a Note
-To edit a note, click on the edit button on the top right, then the user will be given a form to fill out. Once the edit is complete, the user can click on the Edit Note button within the form to submit the changes.
+To edit a note, the user must first click to view the note which they wish to edit. The user can then click on the edit button on the top right, then the user will be given a form to fill out. Once the edit is complete, the user can click on the Edit Note button within the form to submit the changes.
 
 ### Delete a Note
-To delete a note, the user can click on the delete button on the top right of the webpage.
+To delete a note, the user must first click to view the note which they wish to delete. The user can then click on the delete button on the top right of the webpage to delete the note.
 
 # Setup for Local and Docker
 
@@ -39,7 +43,7 @@ To delete a note, the user can click on the delete button on the top right of th
 
     `npm start`
 
-5.  Go to your local browser and enter the following to access the notes page: http://localhost:3000/
+5.  The user can now go to their local browser and enter the following to access the notes page: http://localhost:3000/
 
 ### Docker Setup Instructions
 
@@ -57,11 +61,23 @@ For this assessment, I have submitted the docker containers as .tar files. Pleas
 
     These two commands above serve to load the docker containers for both the frontend and the backend
 
+    if the user is facing permission issues, please type in the following two commands instead (the user will also be prompted for their admin password in this scenario):
+
+    `sudo docker load -i frontend.tar`
+
+    `sudo docker load -i backend.tar`
+
 3. Finally in the terminal, please use the following command:
 
     `docker-compose up`
 
+    if the user is facing permission issues, please type in the following command instead (the user might be prompted for their admin password in this scenario):
+
+    `sudo docker-compose up`
+
     Due to the fact that this application has a need for a local storage, I create a docker-compose file which serves to run the two docker containers while also creating a local storage for the backend docker container to both create and manipulate data.
+
+4.  The user can now go to their local browser and enter the following to access the notes page: http://localhost:3000/
 
 # Design Choice and Technology Usage
 

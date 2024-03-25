@@ -1,5 +1,3 @@
-// App.js
-
 import React, { useState, useEffect } from "react";
 import NoteForm from "./components/NoteForm";
 import NotesList from "./components/NotesList";
