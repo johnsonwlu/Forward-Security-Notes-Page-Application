@@ -1,6 +1,6 @@
 # Forward-Security-Notes-Page-Application
 
-Notes webpage created for assessment purposes. 
+Notes webpage created for assessment purposes. For submission purposes, I have made it possible for the user to access this application either locally or through docker. If the user wishes to run this application through a local file, please access the `Note Page Application Local Version` folder if the user wishes to run this application through a docker container please access the `Note Page Application Docker Version` folder. There are instructions within each of these folders to help the user run this application on their setup.
 
 # Usage
 
@@ -39,7 +39,7 @@ To delete a note, the user can click on the delete button on the top right of th
 
 ### Docker Setup Instructions
 
-For this assessment, I have submitted the docker containers as .tar files. Please use the do the following within this folder to run the application through docker:
+For this assessment, I have submitted the docker containers as .tar files. Please do the following within this folder to run the application through docker:
 
 1. Download the `Dockers Containers` folder above the instructions file and then open up a terminal
 
