@@ -1,7 +1,3 @@
 [
-  {
-    "id": 1711280729830,
-    "title": "Data from local txt file",
-    "content": "Data from local txt file"
-  }
+
 ]
