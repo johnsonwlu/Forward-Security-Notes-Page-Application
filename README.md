@@ -56,7 +56,9 @@ Download the Dockers Containers folders and then open up a terminal
 in the terminal please cd into the Docker Containers folder and use the following commands:
 
 `docker load -i frontend.tar`
+
 `docker load -i backend.tar`
+
 `docker-compose up`
 
 
