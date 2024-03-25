@@ -51,7 +51,7 @@ With .tar files
 
 Please use the following commands within this folder to run the application through docker:
 
-Download the Dockers Containers folders and then open up a terminal
+Download the Dockers Containers folder and then open up a terminal
 
 in the terminal please cd into the Docker Containers folder and use the following commands:
 
